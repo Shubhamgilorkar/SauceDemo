@@ -1,15 +1,14 @@
 import {test, chromium} from '@playwright/test';
+import env from '../env/env.config.js';
 
-test("@Regression End to End flow", async()=>{
+test("@Regression End to End flow", async({ page })=>{
 
-    const browser = await chromium.launch({headless : false});
-    const page = await browser.newPage();
+  
+    await page.goto(env.BASE_URL);
 
-    await page.goto("https://www.saucedemo.com/");
+    await page.locator("#user-name").fill(env.USERNAME);
 
-    await page.locator("#user-name").fill("standard_user");
-
-    await page.locator("#password").fill("secret_sauce");
+    await page.locator("#password").fill(env.PASSWORD);
 
     await page.waitForTimeout(3000);
 

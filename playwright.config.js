@@ -10,30 +10,26 @@ export default defineConfig({
     headless: false
   },
 
-  projects:
-    [
-      {
-        name: 'chromium',
-        use:
-        {
-          browserName: 'chromium'
-        }
-      },
-      {
-        name: 'firefox',
-        use:
-        {
-          browserName: 'firefox'
-        }
-      },
-      {
-        name: 'webkit',
-        use:
-        {
-          browserName: ' webkit '
-        }
+  projects: [
+    {
+      name: 'chromium',
+      use: {
+        browserName: 'chromium'
       }
-    ]
+    },
+    {
+      name: 'firefox',
+      use: {
+        browserName: 'firefox'
+      }
+    },
+    {
+      name: 'webkit',
+      use: {
+        browserName: 'webkit'
+      }
+    }
+  ]
 
 
 
