@@ -1,5 +1,6 @@
 import {test, chromium} from '@playwright/test';
 import env from '../env/env.config.js';
+import { group } from 'node:console';
 
 test("@Regression End to End flow", async({ page })=>{
 
@@ -32,3 +33,28 @@ test("@Regression End to End flow", async({ page })=>{
     await page.waitForTimeout(3000);
 
 });
+
+test("@Sanity Group Test Cases", async({page})=>{
+
+    console.log("@Sanity Group Test Cases");
+    console.log("@Sanity Group Test Cases");
+    console.log("@Sanity Group Test Cases");
+    console.log("@Sanity Group Test Cases");
+    });
+
+test("@e2e Group Test Ceses", async({page})=>{
+    console.log("@e2e Group Test Ceses");
+    console.log("@e2e Group Test Ceses");
+    console.log("@e2e Group Test Ceses");
+    console.log("@e2e Group Test Ceses");
+});
+
+test("@smoke group Test Cases", async({page})=>{
+    console.log("@smoke group Test Cases");
+    console.log("@smoke group Test Cases");
+    console.log("@smoke group Test Cases");
+    console.log("@smoke group Test Cases");
+
+});
+ 
+    
